@@ -1,0 +1,31 @@
+{
+  "name": "svg",
+  "version": "0.0.1",
+  "description": "Create svg elements from a string",
+  "keywords": [],
+  "author": "Raynos <raynos2@gmail.com>",
+  "repository": "git://github.com/Raynos/svg.git",
+  "main": "index",
+  "homepage": "https://github.com/Raynos/svg",
+  "contributors": [
+    {
+      "name": "Jake Verbaten"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/Raynos/svg/issues",
+    "email": "raynos2@gmail.com"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/Raynos/svg/raw/master/LICENSE"
+    }
+  ],
+  "scripts": {
+  }
+}
