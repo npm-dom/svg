@@ -1,2 +1,2 @@
 require('./fragment');
-// require('./document');
+require('./document');
