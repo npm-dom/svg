@@ -19,6 +19,9 @@
   "dependencies": {
   },
   "devDependencies": {
+    "tape": "^2",
+    "browserify": "^4",
+    "brfs": "^1"
   },
   "licenses": [
     {
