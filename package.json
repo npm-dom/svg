@@ -4,35 +4,35 @@
   "description": "Create svg elements from a string",
   "keywords": [],
   "author": "Raynos <raynos2@gmail.com>",
-  "repository": "git://github.com/Raynos/svg.git",
   "main": "index",
-  "homepage": "https://github.com/Raynos/svg",
   "contributors": [
-    {
-      "name": "Jake Verbaten"
-    }
+    "Jake Verbaten <raynos2@gmail.com>",
+    "Damon Oehlman <damon.oehlman@gmail.com>"
   ],
-  "bugs": {
-    "url": "https://github.com/Raynos/svg/issues",
-    "email": "raynos2@gmail.com"
-  },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "tape": "^2",
     "browserify": "^4",
     "brfs": "^1"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://github.com/Raynos/svg/raw/master/LICENSE"
-    }
-  ],
-  "scripts": {
-  },
+  "scripts": {},
   "testling": {
     "preprocess": "$(npm bin)/browserify -d test/all.js > test/bundle.js -t brfs",
-    "scripts": ["test/bundle.js"]
-  }
+    "scripts": [
+      "test/bundle.js"
+    ]
+  },
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/npm-dom/svg.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/npm-dom/svg/issues"
+  },
+  "homepage": "https://github.com/npm-dom/svg"
 }
