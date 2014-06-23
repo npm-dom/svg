@@ -1,5 +1,21 @@
 var reSVG = /^\s*<\s*svg(?:\s|>)/;
 
+/**
+  # svg
+
+  Create svg elements from a string
+
+  ## Examples
+
+  Create an `<svg>` element from an svg fragment:
+
+  <<< examples/rect.js
+
+  Or, create an `<svg>` element using an from a full SVG document,
+  with some help from [brfs](https://github.com/substack/brfs):
+
+  <<< examples/icon.js
+**/
 module.exports = function(text) {
   var div;
 

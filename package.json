@@ -15,7 +15,9 @@
     "browserify": "^4",
     "brfs": "^1"
   },
-  "scripts": {},
+  "scripts": {
+    "gendocs": "gendocs > README.md"
+  },
   "testling": {
     "preprocess": "$(npm bin)/browserify -d test/all.js > test/bundle.js -t brfs",
     "scripts": [
