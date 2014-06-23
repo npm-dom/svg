@@ -9,3 +9,13 @@ test('can create an svg fragment', function(t) {
   t.ok(node instanceof SVGElement);
   t.ok(node.querySelector('rect'), 'found rect');
 });
+
+test('empty text returns an undefined fragment', function(t) {
+  t.plan(1);
+  t.ok(svg('') === undefined);
+});
+
+test('undefined text returns an undefined fragment', function(t) {
+  t.plan(1);
+  t.ok(svg() === undefined);
+});
