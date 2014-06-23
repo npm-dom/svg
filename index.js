@@ -1,7 +1,10 @@
 var reSVG = /^\s*<\s*svg(?:\s|>)/;
 
 module.exports = function(text) {
-  var div = document.createElement('div');
+  var div;
+
+  // if no input, then abort
+  if (! text) return;
 
   // check the text is valid svg
   if (!reSVG.test(text)) {
@@ -9,6 +12,7 @@ module.exports = function(text) {
   }
 
   // parse the text
+  div = document.createElement('div');
   div.innerHTML = text;
 
   // remove any script tags
