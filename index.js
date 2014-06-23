@@ -1,12 +1,22 @@
-module.exports = Element
+var reSVG = /^\s*<\s*svg(?:\s|>)/;
 
-function Element(svgText) {
-    var parser = new DOMParser()
-        , xmlText =  "<svg xmlns=\'http://www.w3.org/2000/svg\'>" +
-            svgText + "</svg>"
-        , docElem = parser.parseFromString(xmlText, "text/xml").documentElement
+module.exports = function(text) {
+  var div = document.createElement('div');
 
-    var node = docElem.firstChild
-    document.importNode(node, true)
-    return node
-}
+  // check the text is valid svg
+  if (!reSVG.test(text)) {
+    text = '<svg>' + (text || '') + '</svg>';
+  }
+
+  // parse the text
+  div.innerHTML = text;
+
+  // remove any script tags
+  // apparently they are supported: http://www.w3.org/TR/SVG/script.html
+  // but we don't want them (not until we are sure they are ok at least)
+  [].slice.call(div.querySelectorAll('script')).forEach(function(script) {
+    script.parentNode.removeChild(script);
+  });
+
+  return div.querySelector('svg');
+};
