@@ -4,7 +4,8 @@ var svg = require('../');
 test('can create an svg fragment', function(t) {
   var node;
 
-  t.plan(2);
+  t.plan(3);
   t.ok(node = svg('<rect fill="blue" height="50" width="50">'));
   t.ok(node instanceof SVGElement);
+  t.ok(node.querySelector('rect'), 'found rect');
 });
